@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/.nekoweb-api/static/site.js" defer></script>
+    <script src="/.nekoweb-api/static/site.js" type="text/javascript" defer></script>
+    <meta charset="UTF-8" />
+    <title>Sitemap</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicons/mainfavi.webp" />
+    <script>
+        var documentTitle = document.title + " ! ";
+
+        (function titleMarquee() {
+            document.title = documentTitle = documentTitle.substring(1) + documentTitle.substring(0, 1);
+            setTimeout(titleMarquee, 200);
+        })();
+    </script>
+    <script src="portfolionavi.js" defer></script>
+    <script src="/tabscript.js" defer></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/framework.css">
+    <style>
+        #meow {
+            min-height: 10rem;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            border-width: 9px;
+            border-style: solid;
+            border-image: url(/assets/bgs/border_lace_grey.png) 7 fill round;
+        }
+        
+        #meow ul {
+            border-left: #5e5e5e 1px solid;
+            margin-right: 0;
+            padding-right: 0;
+            padding-bottom: 10px;
+        }
+        
+        #meow li {
+            list-style-type: "---→";
+            margin: 3px 0px 3px 2.2rem;
+        }
+        
+        #meow ul ul li {
+            list-style-type: "---→";
+            margin: 3px 0px 0px 2.2rem;
+        }
+        
+        #meow ul ul {
+            padding-bottom: 0;
+        }
+        
+        #yearpicker {
+            display: grid;
+            grid-template-areas: "101 201 . .";
+            width: 90%;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 2rem;
+            padding: 0px;
+            gap: 5px;
+        }
+        
+        #yearpicker>button {
+            text-align: center;
+            padding-top: .32rem;
+            color: #5e5e5e;
+            font-family: Ms Ui Gothic;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            border: 0;
+        }
+        
+        .separation {
+            background-color: #eaf8fe;
+            margin-bottom: 1rem;
+            grid-template-columns: 1fr 1fr;
+            padding: 5px;
+            margin-top: 1rem;
+        }
+        
+        .separation p {
+            padding-top: 0;
+        }
+        
+        .separation ul {
+            border: none !important;
+        }
+        
+        .separation li {
+            list-style: none !important;
+            margin: auto !important;
+        }
+        
+        .separation li ul {
+            margin: 3px 0px 0px 1rem;
+            font-size: smaller;
+        }
+        
+        #event {
+            text-align: center;
+            font-size: larger;
+            animation: color-change 1s infinite !important;
+        }
+        
+        #event a:link {
+            animation: color-change 1s infinite !important;
+        }
+        
+        @keyframes color-change {
+            0% {
+                color: red;
+            }
+            50% {
+                color: #0000EE;
+            }
+            100% {
+                color: red;
+            }
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 15rem;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            border: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: -8px;
+            left: 105%;
+            font-size: smaller;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        
+        #changelog {
+            margin: 5px;
+            max-height: 6rem;
+            overflow-y: auto;
+        }
+        
+        #actual_list {
+            box-shadow: 57px 73px 86px -115px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 57px 73px 86px -115px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 57px 73px 86px -115px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big_div">
+        <img src="/assets/deco/windchime1.gif" class="sticker" style="top: 0; right:0; position: absolute;" onclick="sfxWindchime()" onmouseover="sfxWindchime">
+        <div id="laced_in">
+            <header>
+                <img src="/assets/deco/bandagepatches.png" class="sticker" style="width: 15rem; position: relative; bottom: -4rem; left: -4rem; transform: rotate(20deg);">
+                <h1>Sitemap</h1>
+            </header>
+            <marquee id="news">If you've been here before, please CTRL + SHIFT + R to hard reload the website as to make sure everything updates properly!</marquee>
+            <div id="realcontent">
+                <breadcrumb-trail></breadcrumb-trail>
+                <div class="ezbox" id="meow">
+                    <div class="separation">
+                        <div>
+                            <u><b>Key:</b></u>
+                            <p>
+                                <s>Struckthrough</s> = Older, no longer relvant work<br>
+                                <br>
+                                <span style="color: gold;">★</span> = I think you should look at this!
+                                <br>
+                                <span style="font-family:Wingdings; color: green;">&#x004c;</span> = gateway list stuff :-&lpar;
+                            </p>
+                        </div>
+                        <div>
+                            <span class="tooltip"><u><b>Ch<span style="color: #0000EE;">angel</span>og:</b>
+                            </u>
+                            <span class="tooltiptext">will not include things like log/tracker updates or minor corrections</span>
+                            </span>
+                            <div id="changelog">
+                                <ul>
+                                    <li>0360528
+                                        <ul>
+                                            <li> - ++interview reflections</li>
+                                        </ul>
+                                    </li>
+                                    <li>0360527
+                                        <ul>
+                                            <li> - added running start plan</li>
+                                            <li> - added math examples old &amp; new</li>
+                                        </ul>
+                                    </li>
+                                    <li>0260521
+                                        <ul>
+                                            <li> - fixed ticktick link so it actually works for people other than me</li>
+                                        </ul>
+                                    </li>
+                                    <li>0260510
+                                        <ul>
+                                            <li> - updated project cards</li>
+
+                                        </ul>
+                                    </li>
+                                    <li>0260316
+                                        <ul>
+                                            <li> - added 'Log of (actual) commissions I've done'</li>
+
+                                        </ul>
+                                    </li>
+                                    <li>0260219
+                                        <ul>
+                                            <li> - completely overhauled art gallery, now up to date as of writing</li>
+                                        </ul>
+                                    </li>
+                                    <li>0260211
+                                        <ul>
+                                            <li> - added commissions project reflection</li>
+                                            <li> - added art metrics</li>
+                                        </ul>
+                                    </li>
+                                    <li>0260209
+                                        <ul>
+                                            <li> - added 'AHP' catagory under projects</li>
+                                        </ul>
+                                    </li>
+                                    <li>0251107
+                                        <ul>
+                                            <li> - added new goal 'Become a real keyboard warrior'</li>
+                                        </ul>
+                                    </li>
+                                    <li>0250609
+                                        <ul>
+                                            <li> - added Mentor Evaluation</li>
+                                        </ul>
+                                    </li>
+                                    <li>0250606
+                                        <ul>
+                                            <li> - updated chinese notebook to be up-to date, added test TOCFL results</li>
+                                        </ul>
+                                    </li>
+                                    <li>0250604
+                                        <ul>
+                                            <li>- added changelog (this), which I probably should've done ages ago</li>
+                                        </ul>
+                                    </li>
+                                    <li>0250603
+                                        <ul>
+                                            <li>- finished styling updates to all pages besides interview/shadow day pages (they're not happening)</li>
+                                            <li>- updated project page so it actually links to things besides the proposal & updated blurbs for clearness</li>
+                                        </ul>
+                                    </li>
+                                    <li>0250530
+                                        <ul>
+                                            <li> - edited short term vision to remove some whining on the behest of my classmates</li>
+                                        </ul>
+                                    </li>
+                                    <li>0250529
+                                        <ul>
+                                            <li> - fixed issue with some fonts not loading on non-windows machines</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yearpicker">
+                        <button style="background-color: rgba(255, 252, 93, 0.5);" class="tablinks" onclick="openCity(event, 'yone')">
+                        101
+                        </button>
+                        <button style="background-color: rgba(255, 92, 220, 0.51);" class="tablinks" onclick="openCity(event, 'ytwo')" id="defaultOpen">
+                        201
+                        </button>
+                    </div>
+                    <div id="actual_list">
+                        <div id="yone" class="tabcontent">
+                            <ul>
+                                <li><a href="/index.html">Website Homepage</a></li>
+                                <li><a href="sitemap.html">LP Sitemap</a></li>
+                                <li><a href="/art/index.html"><b>Art Gallery/log</b></a><span style="color: gold;"> ★</span>
+                                    <ul>
+                                        <li><a href="/art/page/4.html">c!Tommy... You will forever be famous to me...</a><span style="color: gold;">★</span></li>
+                                        <li><a href="/art/page/3.html">Jade leech getting cut up like sashimi</a></li>
+                                        <li><a href="/art/page/2.html">What you looking crazy for eat ur food!!!</a></li>
+                                        <li><a href="/art/page/1.html">haha no ur so sexy dont kys</a></li>
+                                        <li>... And more. Just click on the gallery link</li>
+                                    </ul>
+                                </li>
+                                <li><b>Learning Plan:</b>
+                                    <ul>
+                                        <li><a href="vision.html"><b>Vision</b></a></li>
+                                        <li>
+                                            <a href="goals/index.html"><b>Goals</b></a><span style="color: gold;"> ★</span>
+                                            <ul>
+                                                <li><a href="goals/horrorlit.html"><s>Horror Literature Seminar Notes</s></a></li>
+                                                <li><a href="goals/cn.html">Chinese Class Notes & Practice & Test Results & Other Stuff</a><span style="color: gold;">★</span></li>
+                                                <li><a href="goals/boxes.html">Boxes</a></li>
+                                                <li><a href="goals/creative_writing.html">Creative Writing</a><span style="color: gold;"> ★</span></li>
+                                                <!-- <li><a href="goals/flashcards.html">Chinese Flashcards</a></li> -->
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="projects/index.html"><b>Projects</b></a> (Directory & Summaries)
+                                            <ul>
+                                                <li><b>Concept Desgn Sketchbook</b>
+                                                    <ul>
+                                                        <li><a href="projects/conceptdesgn_proposal.html">Project Proposal</a><span style="color: gold;">★</span></li>
+                                                        <li><a href="projects/conceptdesgn_annotatedbib.html">Annotated Bibliography</a></li>
+                                                        <li><a href="projects/conceptdesgn_reflection.html">Project Reflection</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><b>TEIO</b>
+                                                    <ul>
+                                                        <li><a href="projects/teio_proposal.html">Project Proposal</a><span style="color: gold;">★</span></li>
+                                                        <li><a href="projects/teio_annotatedbib.html">Annotated Bibliography</a></li>
+                                                        <li><a href="projects/teio_reflection.html">Project Reflection</a><span style="color: gold;">★</span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <b>LTI</b>
+                                            <ul>
+                                                <li><b>Internship @ Highline Heritage Museum:</b>
+                                                    <ul>
+                                                        <li><a href="lti/internship_log.html">Internship Log</a><span style="color: gold;"> ★</span></li>
+                                                        <li><a href="https://docs.google.com/document/d/1HpPYoxVPPrSP3IKHrgDQJuqwgqjJj8k959XJFoOBNbw/edit?usp=sharing" target="_blank">Co-Created rubric</a><span style="color: gold;"> ★</span></li>
+                                                        <li><a href="https://docs.google.com/document/d/1Z-Wy2H7KB8UDsTSBSMBMfLSUE1P_MmWjYLrivMC-MQw/edit?usp=sharing" target="_blank">Internship Site Visit Notes from Chrissy</a></li>
+                                                        <li><a href="https://docs.google.com/document/d/1fIaf8kmKJXeSExiA7TCRH0drYq5k7w2XJDxVH93u5r4/edit?usp=sharing" target="_blank">Internship Mentor Evaluation</a><span style="color: gold;"> ★</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="lti/index.html">LTI Tracker</a></li>
+                                                <li><a href="lti/emailscript.html"><s>Contact Scripts</s></a></li>
+                                                <li><b>Interview pages</b> (Emails, Questions, Recordings, Reflections) (Also the formatting/css 4 these pages is a little broken sorry but you'll have to deal)
+                                                    <ul>
+                                                        <li><a href="lti/fospl_interview.html">Friend of The Seattle Public Library Friend Shop (Sales Manager)</a></li>
+                                                        <li><a href="lti/fospl_interview.html">Highline Heritage Museum (Director)</a></li>
+                                                        <li><a href="lti/kcls_burien_interview.html">KCLS Burien Library (Librarian)</a></li>
+                                                        <li><a href="lti/wingluke_interview.html">Wing Luke Museum (Collections Manager)</a></li>
+                                                        <li><a href="lti/kcls_collectionslibrarian_interview.html">KCLS (Collections Librarian)</a></li>
+                                                        <li><a href="lti/sam_interview.html">Seattle Art Museum (Archivist/Acting Librarian)</a></li>
+                                                        <li><a href="lti/frye_interview.html">Frye Art Museum (Curator)</a></li>
+                                                        <li><a href="lti/sma_interview.html">Seattle Municiple Archives (Archivist/Reference Desk)</a></li>
+                                                        <li><a href="lti/kcma_interview">King County Municiple Archives (Archivist/Manager)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><b>Shadow Day pages:</b>
+                                                    <ul>
+                                                        <li><a href="lti/hhm_shadowday.html">Highline Heritage Museum (Archivist)</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <li><b>Advisory Work:</b>
+                                        <ul>
+                                            <li><b>WITS (Writers In The Schools)</b>
+                                                <ul>
+                                                    <li><a href="LC2/wits.html">WITS Warmups</a></li>
+                                                    <li><a href="LC2/100word.html">100 word memior</a><span style="color: gold;"> ★</span></li>
+                                                </ul>
+                                            </li>
+                                            <li><b>Literary Analysis Essay</b>
+                                                <ul>
+                                                    <li><a href="LC1_exhibition/atdoapti_notes.html">ATDOPI Book Notes/Worksheet</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/12wGuxD2LVMu-q8ICMB0NK_FCIsm__hJ2PiH5qZomnIY/edit?usp=sharing" target="_blank">Supporting a Claim</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1RRmxD-siFNE_ZTyXxK_SgpaQo5jFlkLwGdNjU5NgX_8/edit?usp=sharing" target="_blank">Supporting a Theme</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1YpGsVetlS85Ah_sMyHW_l3isa-3lb04Sta5LrNH5BzA/edit?usp=sharing" target="_blank">Who is Sherman Alexie?</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/13-V6HiFuNOhyvjdTxBTS9x8XVBSPEMK70ZUPxReDgwQ/edit?usp=sharing" target="_blank">Anatomy of an Essay</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1bDW_o2VGlsTTAKyqemu7cWV23FMm1UOac-_4vXFERQ0/edit?usp=sharing" target="_blank">Literary Analysis Pre-Write</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/11b5LPbTRVFD0cdGzFL2-9ACK4OWRn3jhSMmEAQBr4VU/edit?usp=sharing" target="_blank">Literary Analysis Orginizer</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1tPlIVcVZ1RJ1ldI_jqR0hUj9epu5_7onD2UmF6EcoKQ/edit?usp=sharing" target="_blank">Literary Analysis Outline</a></li>
+                                                    <li><a href="LC2/essay.html">Literary Analysis Essay</a><span style="color: gold;"> ★</span></li>
+                                                </ul>
+                                            </li>
+                                            <li><b>Current Events:</b>
+                                                <ul>
+                                                    <li><a href="https://docs.google.com/document/d/1nNoL27IQ8TiE_hcRKHmofivCt27zJ_rK5HLpjGCLvBI/edit?usp=sharing" target="_blank">#1 Knowlage</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1TRgLLEvv0pCOAg6w1LnkmYVIZVIdjSPx0BT5p35RiNI/edit?usp=sharing" target="_blank">#2 Understanding</a><span style="color: gold;"> ★</span></li>
+                                                    <li><a href="https://docs.google.com/document/d/1zNag-XkoYIJFUTnpm4utqqUFFF1GlDet-Y2lt9XgdBs/edit?usp=sharing" target="_blank">#3 and 4 Application and Analysis</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1wy_udZzCqQ91-gvaRtWp0ok58PFlq7jsmwmpx60w738/edit?usp=sharing" target="_blank">#5 and 6 Synthesis and Evaluation</a><span style="color: gold;"> ★</span></li>
+                                                </ul>
+                                            </li>
+                                            <li><b>Health:</b>
+                                                <ul>
+                                                    <li><a href="https://docs.google.com/document/d/1NL1QkYeSfP_tcVYcxtjltqPG9ez7_nHh1BpDjvVcqYY/edit?usp=sharing" target="_blank">Food Label Comparisons</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1_GXwrdoXH9gQRROk526SOlLCH_hK9QaU85OscPuCgL4/edit?usp=sharing" target="_blank">Track Your Nutrition</a>/<a href="https://file.garden/Ze6P3FucmRDZDfxQ/Screenshot%202025-05-05%20093732.png"
+                                                            target="_blank">Cronometer Report for April 21st</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1QO6pq6uq-9RQXMbbdsbLpsk-uEUr9N6fuhHaJsIKSQU/edit?usp=sharing" target="_blank">Macro- and Micronutrients</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1UJXf8SH6K7X6tDtb588heoFpW1MkMkpT1pHG0NV7Heg/edit?usp=sharing" target="_blank">Exercises</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/18cSINz5FcIikFElFZK497XbYdZPEWP0RDY2VOn_9b9Q/edit?usp=sharing" target="_blank">Neurotransmitters</a></li>
+                                                    <li><a href="https://docs.google.com/document/d/1DkCPwvB1Zg_SuuWjsZY0rJbH6BqaNE2lNQLqYF8nN1Q/edit?usp=sharing" target="_blank">Mental Illnesses</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><b>Msc.:</b>
+                                        <ul>
+                                            <li><b>LC1:</b>
+                                                <ul>
+                                                    <li><a href="LC1/LC_reflection.html">Learning Cycle 1 Reflection</a></li>
+                                                    <li><a href="LC1/exhibition_reflection.html">Exhibition Reflection</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <b>LC2:</b>
+                                                <ul>
+                                                    <li><a href="LC2/LC_reflection.html">Learning Cycle 2 Reflection</a></li>
+                                                    <li><a href="LC2/exhibition_reflection.html">Exhibition Reflection</a></li>
+                                                    <li><a href="LC2/exhibition_feedback_notes.html">Exhibition Feedback Notes</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><b>LC3:</b>
+                                                <ul>
+                                                    <li><a href="LC3/coverletter.html">Level-up Cover Letter</a><span style="color: gold;"> ★</span></li>
+                                                    <li><a href="LC3/exhibition_feedback_notes.html">Panel Feedback Notes</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="ytwo" class="tabcontent">
+                            <ul>
+                                <li><a href="/index.html">Website Homepage</a></li>
+                                <li><a href="sitemap.html">LP Sitemap</a>
+                                    <- You are here!</li>
+                                        <li><a href="/art/index.html"><b>Art Gallery</b></a><span style="color: gold;"> ★★★★★★★★★★★</span>
+                                            <ul>
+                                                <li><a href="projects/commissons_log.html">Log of (actual) commissions I've done</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="https://director-of-the-false-last-act.notion.site/Illustration-Queue-28e5933d607a80e28fb5d3ab77764a95?source=copy_link" target="_blank">Illustration Queue</a><span style="color: gold;"> ★</span>
+                                            <ul>
+                                                <li><a href="https://director-of-the-false-last-act.notion.site/2ad5933d607a80f0ad7dfba6aa6ebc46?v=2ad5933d607a8078b7db000cd12e6b2a&source=copy_link" target="_blank">Artfight Hitlist</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Learning Plan:</b>
+                                            <ul>
+                                                <li><a href="vision.html"><b>Vision</b></a></li>
+                                                <li>
+                                                    <a href="goals/index.html"><b>Goals</b></a><span style="color: gold;"> ★</span>
+                                                    <ul>
+                                                        <li><a href="goals/cn2.html">Chinese Year 2 notes & class log & such</a></li>
+                                                        <li><a href="goals/cn2_book.html">Chinese Self-Study</a> (going through book)<span style="color: gold;"> ★</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="projects/index.html"><b>Projects</b></a> (Directory & Summaries)
+                                                    <ul>
+                                                        <li><b><s>Opening</s> Getting Commissions</b>
+                                                            <ul>
+                                                                <li><a href="projects/commission_proposal.html">Project Proposal</a></li>
+                                                                <li><a href="projects/commission_annotatedbib.html">Project Bibliography</a></li>
+                                                                <li><a href="projects/commission_reflection.html">Project Reflection</a></li>
+                                                                <li><s><a href="/art/tos.html">Terms of Service</a></s></li>
+                                                                <li><a href="https://vgen.co/niko_lai" target="_blank">Vgen</a></li>
+                                                                <li><a href="https://toyhou.se/~forums/71.art-marketplace/786366.on-sale-vgenvenmo-commissions-open-5" target="_blank">Bs toyhouse forum post</a></li>
+                                                                <li><a href="https://highlineschools-my.sharepoint.com/:x:/g/personal/4035806_stu_highlineschools_org/IQBbYgRvlbWlT6Cj1jIiPyt2AUaLqgyOzYADcALj3o8kpvY?e=h2M3Qr" target="_blank">Art Posting Metrics Spreadsheet</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><b>Angel Housing Project (RPGMaker Visual Novel)</b>
+                                                            <ul>
+                                                                <li><a href="projects/ahp_proposal.html">Project Proposal</a></li>
+                                                                <li><a href="">Project Bibliography</a></li>
+                                                                <li><a href="https://app.milanote.com/1VHf3t13Jo9pc9?p=R78ABXJVokE">Outline</a></li>
+                                                                <li><a href="https://highlineschools-my.sharepoint.com/:w:/g/personal/4035806_stu_highlineschools_org/IQDoc-76mhfKQaFmZ9NUTtZZAUBf_WpfUnouhb8jeZRkNgc?e=ANoacz">Script</a></li>
+                                                                <li><a href="https://n1k0la1.itch.io/angel-housing-project?secret=Gb2WgYeEeKusFB3mIfkPFmzBxfc">itch.io</a></li>
+                                                                <li><a href="projects/ahp_reflection.html">Project Reflection</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><b>Vending art</b>
+                                                            <ul>
+                                                                <li><a href="projects/vending_annotatedbib.html">Project Bibliography</a></li>
+                                                                <li><a href="https://highlineschools-my.sharepoint.com/:x:/g/personal/4035806_stu_highlineschools_org/IQCmW82BZ-ddT6AyrtRRadKwAV9wcwDn3G_elZ5B8vQebb8?e=jd5Plx" target="_blank">(Depressing) Ledger</a></li>
+                                                                <li><a href="projects/vending_log.html">Project Log</a></li>
+                                                                <li><a href="/links.html">I made a page to link on my buisness card</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b>LTI</b>
+                                                    <ul>
+                                                        <li><a href="lti/index.html">Contact Log</a>
+                                                        </li>
+                                                        <li><b>Reflections:</b>
+                                                            <ul>
+                                                                <li><a href="lti/navymuseum_reflection.html">Puget Sound Naval Museum Intervie Reflection</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                                <li><a href="lti/connectionsmu_reflection.html">Connections Museum Interview + Shadow Day Reflection</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                                <li><a href="lti/seana_reflection.html">Seattle National Archives Interview Reflection</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><b>Internship @ Highline Heritage Museum:</b>
+                                                            <ul>
+                                                                <li><a href="lti/internship_log.html">Internship Log</a></li>
+                                                                <li><a href="https://file.garden/ZvH2_hzmIEmLYAXe/Screenshot%202025-11-17%20093011.png" target="_blank">Pastperfect Online Summary</a></li>
+                                                                <li><a href="lti/hhm_internship_reflection.html">Internship Reflection</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <li><b>Advisory Work:</b>
+                                                        <ul>
+                                                            <li><a href="https://highlineschools-my.sharepoint.com/:w:/g/personal/4035806_stu_highlineschools_org/EUcBCMkr2kNKobCoqyLQrEoBrqUD_du2pOWq_OAzUPEwZQ?e=PUqvc2" target="_blank">Autobiography Draft</a>,
+                                                                <a href="LC6/autobio_snippet.html">choice snippet</a></li>
+                                                            <li><b>Genocide Studies:</b>
+                                                                <ul>
+                                                                    <li><a href="https://file.garden/ZvH2_hzmIEmLYAXe/'Night'%20Vocabulary%20Notes.md" target="_blank">'Night' Vocabulary</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1CJUSueVzLryjf58LkuFEWGV3dbblGxYpY-Wj6EFqUfw/edit?usp=sharing" target="_blank">'Night' timeline</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/11ObehESHVcTRAydSbsbTN09dLLgyP5ysy3DcDFU_4NA/edit?usp=sharing" target="_blank">10 Stages of Genocide</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1wNWNlMM2eF0Etx_DBWjIIDM_8eMGZqpIFoOtkAx0bBs/edit?usp=sharing" target="_blank">Camp Orginization</a></li>
+                                                                    <li><a href="https://docs.google.com/presentation/d/1yKdLYc2PHISdNS2E88PLcdakkQhoyZ29c_z5ZNbJPo8/edit?usp=sharing" target="_blank">Resistance Groups Slide</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1yN0q1TMv01MoQRSObfuXG3RNAin5bR1jGtmSMcstPzQ/edit?usp=sharing" target="_blank">Comparing Genocides Worksheet</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1AHN7Kkan_zt9IjmdrodZVL-6HFXlqizL8Z6IcAT9L7o/edit?usp=sharing" target="_blank">Genocide Socratic</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1RbO2-O1S4eUBdj60Xs5cs4oUQ4ohwN4jfNBF3HGMptQ/edit?tab=t.rcgafwpa8ots" target="_blank">Genocide Comparisions Essay</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span>
+                                                                        <ul>
+                                                                            <li><a href="https://file.garden/ZvH2_hzmIEmLYAXe/Screenshot%202025-11-17%20091444.png" target="_blank">Email to Violet Cho (PHD Canidate in Anthropology with a focus on the Karen minority in Myanmar)</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><b>Class Reads (Malcolm X):</b>
+                                                                <ul>
+                                                                    <li><a href="https://docs.google.com/document/d/1mUqY5jw3Wl8Z27wUwgcV5LfLCYKyh_RuwpmhsabMFsc/edit?usp=sharing" target="_blank">Path to Radicalozation</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1Y5j2zH7rqbPHzUWMdrlGaHQC35AI5xvAPgo8T7C0aZw/edit?tab=t.qjj5z18m1pnk" target="_blank">Paragraph</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><b>Research Paper:</b>
+                                                                <ul>
+                                                                    <li><a href="https://docs.google.com/document/d/1453e2Fv4eBKP5uEiFiOzwa9tY0SU1EICnlVdZ9PKKVo/edit?usp=sharing" target="_blank">Topic Brainstorm</a></li>
+                                                                    <li><a href="https://highlineschools-my.sharepoint.com/:w:/g/personal/4035806_stu_highlineschools_org/IQDPwvuobThIRp7pr865wx6IAY2VaI-DmIaysp-_q19l-YI?e=J6Usrt" target="_blank">Research Paper: <i>Feasibility Study on the Operation of a Large-Scale Ball Jointed Doll Company in the United States</i></a>                                                                        <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><b>Engineering:</b>
+                                                                <ul>
+                                                                    <li><a href="https://file.garden/ZvH2_hzmIEmLYAXe/IMG_4254.jpg">Challenge 1: Paper Airplane</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/11dwTd-74VTX6a2Iie8-LP8X_99E9s6mug3xRJGKew-8/edit?usp=sharing" target="_blank">Challenge 2: Build a Bridge</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1GOXpyg3UjTNvfg2tH4O9ytBuMJQ9Ly8br40PRUnVXc4/edit?usp=sharing" target="_blank">Challenge 3: Barbie Wingsuit</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><b>Msc.:</b>
+                                                        <ul>
+                                                            <li><a href="https://ticktick.com/pub/project/collaboration/invite/7f7891d184174320be5072ec17f70c7b?u=c8d761fab286479c9f9697d4f1879557">Fun new task list site</a></li>
+                                                            <li><b>LC4:</b>
+                                                                <ul>
+                                                                    <li><a href="https://docs.google.com/document/d/1i1rTnz0nHhRwij-wZ84pvYvSeQCDKG3G8TmCi1yjMVY/edit?usp=sharing" target="_blank">November PQQR Reflection</a></li>
+                                                                    <li><a href="LC4/LC_reflection.html">Learning Cycle 4 Reflection</a></li>
+                                                                    <li><a href="LC4/exhibition_reflection.html">Learning Cycle 4 Exhibition Reflection</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><b>LC5:</b>
+                                                                <ul>
+                                                                    <li><a href="https://highlineschools-my.sharepoint.com/:w:/g/personal/4035806_stu_highlineschools_org/IQBDjyHL-0tzR5ho_nnDGcBGAVTBG1hBcv3eL6x9Cajc7y8?e=f4OjDd" target="_blank">WITS writing</a>                                                                        <span style="color: red;"><- Got nominated for the end of year reading!!!</span></li>
+                                                                    <li><a href="LC5/ac_reflection.html">Art Critique Seminar Reflection</a></li>
+                                                                    <li><a href="LC5/LC_reflection.html">Learning Cycle 5 Reflection</a></li>
+                                                                    <li><a href="LC5/exhibition_reflection.html">Learning Cycle 5 Exhibition Reflection</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><b>LC6:</b>
+                                                                <ul>
+                                                                    <li><a href="https://docs.google.com/document/d/1-PtPK6O7xJZgSBbO-hEQBCtrQ6ZuTdiYWjrxnTyTu6c/edit?usp=sharing" target="_blank">Gateway Expectations</a></li>
+                                                                    <li><a href="https://docs.google.com/document/d/1bwtGPBkmsdWmE8aGJwor0MuzgeyTDmsa9rOFyHdpjYY/edit?usp=sharing" target="_blank">Gateway Checklist</a></li>
+                                                                    <li><a href="https://highlineschools-my.sharepoint.com/:w:/g/personal/4035806_stu_highlineschools_org/IQDFfX6coIY_RpqSRCCgLsLOAQKgMsIIJm9d93wCrfr7s6E?e=eggnxF">Cover Letter</a></li>
+                                                                    <li><a href="LC6/mathexamples.html">Math Examples old &amp; new</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                                    <li><a href="LC6/runningsstartplan.html">Running Start Plan</a> <span style="font-family:Wingdings; color: green;">&#x004c;</span></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                            </ul>
+                                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
