@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Log</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicons/mainfavi.webp" />
+    <script>
+        var documentTitle = document.title + " ! ";
+
+        (function titleMarquee() {
+            document.title = documentTitle = documentTitle.substring(1) + documentTitle.substring(0, 1);
+            setTimeout(titleMarquee, 200);
+        })();
+    </script>
+    <script src="/learning_plan/portfolionavi.js" defer></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/framework.css">
+    <script src="/tabscript.js" defer></script>
+    <style>
+        #meow {
+            min-height: 10rem;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border: none !important;
+            background: none !important;
+            margin-top: 5px !important;
+        }
+        
+        #meow>ul>li {
+            list-style-image: url("/assets/ball_s_06.gif");
+            margin-left: 2rem;
+        }
+        
+        #tab-wrapper {
+            display: grid;
+            width: 90%;
+            margin-bottom: 0px;
+            height: 2rem;
+            padding: 0px;
+            z-index: 1;
+            grid-template-areas: "first second third fourth .";
+            gap: 5px;
+        }
+        
+        #tab-wrapper>a {
+            text-align: center;
+            z-index: 1;
+            padding-top: .32rem;
+            color: #5e5e5e;
+            font-family: Ms Ui Gothic;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            border: 0;
+            text-decoration: none;
+        }
+        
+        th,
+        td {
+            border: 1px solid #5e5e5e;
+        }
+        
+        #tab-wrapper {
+            display: grid;
+            grid-template-areas: "first second . . . ";
+            width: 90%;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: -1px;
+            height: 2rem;
+            padding: 0px;
+            gap: 5px;
+        }
+        
+        #tab-wrapper>button {
+            text-align: center;
+            padding-top: .32rem;
+            color: #5e5e5e;
+            font-family: Ms Ui Gothic;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            border: 0;
+        }
+        
+        #actuallog {
+            background-color: white;
+            border-width: 9px;
+            border-style: solid;
+            border-image: url(/assets/bgs/border_lace_grey.png) 7 fill round;
+            border-top: #5e5e5e 5px solid !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big_div">
+        <img src="/assets/deco/windchime1.gif" class="sticker" style="top: 0; right:0; position: absolute;" onclick="sfxWindchime()" onmouseover="sfxWindchime">
+        <script>
+            function sfxWindchime() {
+                var sfx = new Audio("https://files.catbox.moe/3rzc9r.mp3");
+                sfx.sfxWindchime();
+            }
+        </script>
+        <div id="laced_in">
+            <header>
+                <img src="/assets/deco/bandagepatches.png" class="sticker" style="width: 15rem; position: relative; bottom: -4rem; left: -4rem; transform: rotate(20deg);">
+                <h1>Contact Log</h1>
+            </header>
+            <marquee id="news">Please listen carefully, as our menu options have changed. To schedule an interview, press 1 (one) To view future events, press 2 (two). To see an interview or shadow day's page, press the respective entry in the table.</marquee>
+            <div id="realcontent">
+                <breadcrumb-trail></breadcrumb-trail>
+                <div class="ezbox" id="meow">
+                    <div id="tab-wrapper">
+                        <button style="background-color: rgba(255, 252, 93, 0.5);" class="tablinks" onclick="openCity(event, '101')">
+                        101
+                        </button>
+                        <button style="background-color: rgba(255, 92, 220, 0.5);" class="tablinks" onclick="openCity(event, '201')" id="defaultOpen">
+                        201
+                        </button>
+                    </div>
+                    <div id="actuallog">
+                        <script src="contact_log101.js" defer></script>
+                        <101-year id="101" class="tabcontent">
+                        </101-year>
+                        <div id="201" class="tabcontent">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Business Name</th>
+                                        <th>Contact Name</th>
+                                        <th>Job Title/Description</th>
+                                        <th>Email</th>
+                                        <th>Phone number</th>
+                                        <th>Date Contacted</th>
+                                        <th>Follow-up</th>
+                                        <th>Interview date</th>
+                                        <th>Shadow Day</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="green">
+                                        <td>Puget Sound Navy Museum</td>
+                                        <td>Kathrine Young</td>
+                                        <td>Archivist</td>
+                                        <td>kathrine.young2.civ@ us.navy.mil</td>
+                                        <td></td>
+                                        <td>0260220</td>
+                                        <td></td>
+                                        <td>0260312</td>
+                                        <td>0260519 @ 10:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://scp-wiki.wikidot.com/scp-9811" target="_blank">Montanna [sic] Natural and Cultural History Museum</a></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="green">
+                                        <td>Connection Museum Seattle</td>
+                                        <td>Ed Mattson</td>
+                                        <td>Volunteer Board Member</td>
+                                        <td>info@ connectionsmuseum. org</td>
+                                        <td>(206) 767- 3012</td>
+                                        <td>0260324</td>
+                                        <td>0260325<br>0260327</td>
+                                        <td>0260329</td>
+                                        <td>0260428 @ 1:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tacoma Art Museum</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Info@ tacomaartmuseum .org</td>
+                                        <td>(253) 272- 4258</td>
+                                        <td>0260324</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="green">
+                                        <td>National Archives at Seattle</td>
+                                        <td>Courtney Elliott</td>
+                                        <td></td>
+                                        <td>seattle. archives @nara .gov</td>
+                                        <td>(206) 336- 5132</td>
+                                        <td>0260421</td>
+                                        <td></td>
+                                        <td>0260430 @ 11:00</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Klondike Gold Rush National Historical Park</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>stupid form</td>
+                                        <td>(206) 220- 4240</td>
+                                        <td>0260421</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="green">
+                                        <td>Seattle Public Library (Special Collections)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>stupid form</td>
+                                        <td>(206) 386- 4636</td>
+                                        <td>0260421</td>
+                                        <td></td>
+                                        <td>over email</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            Note: I've put a pause on contating places as we near the end of the year. The Connections museum is willing to have me as an intern (and they seem lovely to work with) but I'd like to go do the shadow day with the Naval Museum first before making a decision.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
