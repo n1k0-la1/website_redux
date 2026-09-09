@@ -1,11 +1,71 @@
+:root {
+    --maingradient: linear-gradient(0deg, #cbe2f8, #ffffff 60%);
+    --shortergradient: linear-gradient(0deg, #cbe2f8, #ffffff 80%);
+    --grey: #747474;
+    --lightgrey: #efefef;
+    --hyperlinkblue: #0000EE;
+    --lightblue: #eaf8fe;
+    --mainborder: ridge #608dc4;
+}
+
 @font-face {
     font-family: Zpix;
     src: url(/assets/font/zpix.ttf);
 }
 
+@font-face {
+    font-family: ysbth;
+    src: url(/assets/font/ysbth.ttf);
+}
 
+@font-face {
+    font-family: basiic;
+    src: url(/assets/font/basiic.ttf);
+}
+
+a {
+    color: var(--hyperlinkblue);
+}
+
+a:visited {
+    color: var(--hyperlinkblue);
+}
+
+a:hover {
+    color: var(--hyperlinkblue);
+}
+
+a:active {
+    color: var(--hyperlinkblue);
+}
+
+.sticker {
+    position: absolute;
+    pointer-events: none;
+    z-index: top;
+}
 
 body {
     background: url(/assets/imgs/bg/sonny-mauricio-kIr8e-01eAw-unsplash.jpg);
-    font-family: MS UI Gothic;
+    font-family: basiic;
+    color: var(--grey);
+}
+
+thead>tr {
+    background: var(--shortergradient);
+}
+
+table,
+th,
+td {
+    border: 2px var(--mainborder);
+    border-collapse: collapse;
+}
+
+tbody>tr:nth-child(even) {
+    background-color: var(--lightgrey);
+}
+
+td {
+    padding: 5px
 }

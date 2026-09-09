@@ -1,81 +1,150 @@
 .basicquote {
-    border-left: solid black 2px;
+    border-left: solid 3px;
     padding-left: 1rem;
     font-style: italic;
     font-size: smaller;
     display: block;
 }
 
-        body {
-            gap: 1rem;
-            padding: 2rem;
-            display: flex;
-            width: 100vw;
-            border: 5px solid blue;
-        }
+body {
+    gap: 1rem;
+    padding: 2rem;
+    display: flex;
+}
 
-        #cont {
-            display: flex;
-            border: 5px solid red;
-            width: 70vw;
-            flex: 1;
-        }       
+#cont {
+    display: flex;
+    width: 70vw;
+    flex: 1;
+}
 
-        #lacewrap {
-            border: .8rem solid transparent;
-            border-image: url(/assets/imgs/bg/border_lace_fancy_white.png) 17 round;
-            background: url(/assets/imgs/bg/bgtile_strip_a77.gif);
-            background-clip: content-box;
-        }
+#lacewrap {
+    border: .8rem solid transparent;
+    border-image: url(/assets/imgs/bg/border_lace_fancy_white.png) 17 round;
+    background: url(/assets/imgs/bg/bgtile_strip_a77.gif);
+    background-clip: content-box;
+}
 
-        header {
-            border: 5px solid green;
-            height: 20vh;
-            flex-direction: column-reverse;
-            display: flex;
-            background-image: url(/assets/imgs/header.png);
-            background-size: cover;
-        }
+header {
+    height: 25vh;
+    flex-direction: column-reverse;
+    display: flex;
+    background-image: url(/assets/imgs/header.png);
+    background-size: cover;
+    border: var(--mainborder);
+    border-width: 3px 3px 0px 3px;
+}
 
-        #marquee {
-            height: 1.5em;
-            border: 5px solid black;
-            margin-top: auto;
-        }
+marquee {
+    height: 1.5em;
+    margin-top: auto;
+    border: var(--mainborder);
+    border-width: 3px;
+    color: red;
+    padding-top: 7px;
+    margin-bottom: 0px;
+}
 
-        header>h1 {
-            margin-top: auto;
-            margin-right: 1rem;
-            text-align: right;
-        }
+marquee> {
+    padding: auto;
+}
 
-        main {
-            display: flex;
-            min-height: 60vh;
-            border: 5px solid yellow;
-        }
+header>h1 {
+    margin-top: auto;
+    margin-right: 1rem;
+    text-align: right;
+    font-size: 73px;
+    -webkit-text-stroke: 3px #9daebd;
+    color: #fafdff;
+    font-family: ysbth;
+    text-decoration: none;
+}
 
-        aside {
-            width: 15vw;
-            overflow: hidden;
-            border: 5px solid purple;
-        }
+main {
+    display: flex;
+    min-height: 60vh;
+    margin-top: 0px;
+}
 
-        aside>img {
-            display: block;
+aside {
+    width: 15vw;
+    overflow: hidden;
+    border: var(--mainborder);
+    border-width: 0px 3px 3px 3px;
+    background: var(--maingradient);
+}
 
+aside>ul {
+    padding: 1px;
+    margin: 0px;
+    width: 100%;
+}
 
-            margin: auto;
-            width: 90%;
-        }
+aside li {
+    border: var(--mainborder);
+    border-width: 0px 0px 3px 0px;
+    padding: 6px 1px;
+    margin: 0px;
+    list-style: none;
+    background: var(--maingradient);
+    width: 100%;
+}
 
-        #calwrapper {
-            border: 5px solid pink;
-        }
+.navsection {
+    font-weight: 600;
+    font-size: 130%;
+    padding: 10px 0px;
+}
 
-        #contwrap {
-            border: 5px solid black;
-            width: 60vw;
-            padding: 10px;
-            background: white;
-        }
+aside>img {
+    display: block;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+#contwrap {
+    border-width: 0px 9px 9px 0px;
+    border-style: solid;
+    border-image: url(/assets/imgs/bg/border_lace_grey.png) 7 fill round;
+    width: 60vw;
+    padding: 1rem;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 15rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: 105%;
+    font-size: smaller;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#changelog {
+    margin: 5px;
+    max-height: 6rem;
+    overflow-y: auto;
+}
+
+#changelog li {
+    list-style: none;
+}
