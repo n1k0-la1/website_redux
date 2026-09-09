@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template~</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/portfolio.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div style="flex: 3;">
+        <header>
+            <div class="marquee"></div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const pageTitle = document.title;
+                    const h1Element = document.querySelector('h1');
+
+                    if (h1Element) {
+                        h1Element.textContent = pageTitle;
+                    }
+                });
+
+            </script>
+            <h1></h1>
+        </header>
+        <main>
+            <aside>
+                <ul>
+                    <li class="navsection">Portfolio
+                        <ul>
+                            <li><a href="/portfolio/index.html"></a>Sitemap</li>
+                            <li><a href=""></a>Art Gallery</li>
+                            <li><a href="/portfolio/testytest.html">Test</a></li>
+                        </ul>
+                    </li>
+                    <li class="navsection">Learning Plan
+                        <ul>
+                            <li><a href="/portfolio/vision.html">Vision</a></li>
+                            <li><a href="/portfolio/goal/index.html">Goals</a></li>
+                            <li><a href="/portfolio/project/index.html">Projects</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="" class="ad">
+                <script defer>
+                    const imageArray = [
+                        "/assets/imgs/meme/borntowork.png",
+                        "/assets/imgs/meme/letsdoourbestthisweek.png",
+                        "/assets/imgs/meme/bleakworld.png",
+                        "/assets/imgs/meme/orvpropaganda_pixeled.jpg",
+                        "/assets/imgs/meme/toobusywworknotimetokms.jpg",
+                        "/assets/imgs/meme/yjh_lockin.jpg",
+                        "/assets/imgs/meme/yaoimotive.jpg",
+                        "/assets/imgs/meme/theworkisalreadydone.jpg",
+                        "/assets/imgs/meme/urchineseisbad.jpg",
+                        "/assets/imgs/meme/kdj_lockin.jpg",
+                        "/assets/imgs/meme/bitchgraduate.jpg"
+                    ];
+
+                    const image = document.querySelector(".ad");
+
+                    window.onload = () => generateRandomPicture(imageArray);
+
+                    function generateRandomPicture(array) {
+                        let randomNum = Math.floor(Math.random() * array.length);
+                        image.setAttribute("src", array[randomNum]);
+                    }
+                </script>
+            </aside>
+            <div id="cont-shell">
+                so the stuff goes here basically... Hopefully!
+            </div>
+        </main>
+    </div>
+    <div style="flex: 1;">
+        <fieldset style="padding:0px;border:0;margin:0px;">
+            <legend><a href="http://calendar-muryou.com/" style="color:hotpink;text-decoration: none;font-size:9pt;"
+                    target="_blank" rel="nofollow"></a></legend><iframe
+                src="https://calendar.sakura.ne.jp/blog_cal.html" scrolling="no"
+                style="background-color:#fbe;padding:0px;border:0;margin:0px;overflow:hidden;width:172px;height:636px;overflow:hidden;"></iframe>
+        </fieldset>
+    </div>
+</body>
+
+</html>
