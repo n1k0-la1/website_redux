@@ -27,15 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageArray = [
                         "/assets/imgs/meme/borntowork.png",
                         "/assets/imgs/meme/letsdoourbestthisweek.png",
-                        "/assets/imgs/meme/bleakworld.png",
                         "/assets/imgs/meme/orvpropaganda_pixeled.jpg",
-                        "/assets/imgs/meme/toobusywworknotimetokms.jpg",
                         "/assets/imgs/meme/yjh_lockin.jpg",
                         "/assets/imgs/meme/yaoimotive.jpg",
                         "/assets/imgs/meme/theworkisalreadydone.jpg",
                         "/assets/imgs/meme/urchineseisbad.jpg",
                         "/assets/imgs/meme/kdj_lockin.jpg",
-                        "/assets/imgs/meme/bitchgraduate.jpg"
+                        "/assets/imgs/meme/bitchgraduate.jpg",
+                        "/assets/imgs/meme/locktfingodrawsomethingmakeuroshihappy.jpg",
+                        "/assets/imgs/meme/neverkys.jpg",
+                        "/assets/imgs/meme/bossmakesadollarimakeadimethatswhyidrawyaoioncompanytime.jpg",
+                        "/assets/imgs/meme/youryaoiaintcheap.jpg",
+                        "/assets/imgs/meme/quittingisnotacceptable.jpg",
+                        "/assets/imgs/meme/haraurara_youmiss100oftheshotsudonttake.jpg",
+                        "/assets/imgs/meme/workharderustupidermin.jpg",
                     ];
 
                     const image = document.querySelector(".ad");
