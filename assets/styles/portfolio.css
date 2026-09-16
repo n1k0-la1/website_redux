@@ -8,7 +8,6 @@
 
 body {
     gap: 1rem;
-    padding: 2rem;
     display: flex;
 }
 
@@ -42,7 +41,8 @@ marquee {
     border-width: 3px;
     color: red;
     padding-top: 7px;
-    margin-bottom: 0px;
+    margin: 0;
+    display: block;
 }
 
 marquee> {
@@ -75,9 +75,10 @@ aside {
 }
 
 aside>ul {
-    padding: 1px;
+    padding: 0px;
     margin: 0px;
     width: 100%;
+    display: block;
 }
 
 aside li {
@@ -88,6 +89,7 @@ aside li {
     list-style: none;
     background: var(--maingradient);
     width: 100%;
+    display: block;
 }
 
 .navsection {

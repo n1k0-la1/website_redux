@@ -7,15 +7,120 @@
     <title>Sitemap</title>
     <link rel="stylesheet" href="/assets/styles/style.css">
     <link rel="stylesheet" href="/assets/styles/portfolio.css">
-    <script src="/assets/js/portfolio_layout.js"></script>
-    <script src="/assets/js/tabscript.js"></script>
+    <script src="/assets/js/tabscript.js" defer></script>
 </head>
+<style>
+    #tab_row {
+        display: grid;
+        grid-template-areas: "101 201 301 .";
+        width: 90%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 2rem;
+        padding: 0px;
+        gap: 5px;
+    }
+    
+    #tab_row button {
+        text-align: center;
+        padding-top: .32rem;
+        color: #5e5e5e;
+        font-family: basiic;
+        font-size: 1rem;
+        line-height: 1.188rem;
+        border: 0;
+    }
+    
+    #sitemap_cont ul {
+        border-left: #5e5e5e 1px solid;
+        margin-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+    
+    #sitemap_cont li {
+        list-style-type: "---→";
+        margin: 3px 0px 3px 2.2rem;
+        font-weight: bolder;
+    }
+    
+    #sitemap_cont a {
+        font-weight: normal;
+    }
+    
+    #sitemap_cont ul ul li {
+        list-style-type: "---→";
+        margin: 3px 0px 0px 2.2rem;
+    }
+    
+    #sitemap_cont ul ul {
+        padding-bottom: 0;
+    }
+</style>
 
 <body>
     <div id="lacewrap">
         <div id="headerwrap">
+            <header>
+                <div class="marquee"></div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const pageTitle = document.title;
+                        const h1Element = document.querySelector('h1');
+
+                        if (h1Element) {
+                            h1Element.textContent = pageTitle;
+                        }
+                    });
+                </script>
+                <h1></h1>
+            </header>
             <marquee>If you've been here before, please CTRL + SHIFT + R to hard reload the website as to make sure everything updates properly!</marquee>
             <main>
+                <script defer>
+                    const imageArray = [
+                        "/assets/imgs/meme/borntowork.png",
+                        "/assets/imgs/meme/letsdoourbestthisweek.png",
+                        "/assets/imgs/meme/orvpropaganda_pixeled.jpg",
+                        "/assets/imgs/meme/yjh_lockin.jpg",
+                        "/assets/imgs/meme/yaoimotive.jpg",
+                        "/assets/imgs/meme/theworkisalreadydone.jpg",
+                        "/assets/imgs/meme/urchineseisbad.jpg",
+                        "/assets/imgs/meme/kdj_lockin.jpg",
+                        "/assets/imgs/meme/bitchgraduate.jpg",
+                        "/assets/imgs/meme/locktfingodrawsomethingmakeuroshihappy.jpg",
+                        "/assets/imgs/meme/neverkys.jpg",
+                        "/assets/imgs/meme/bossmakesadollarimakeadimethatswhyidrawyaoioncompanytime.jpg",
+                        "/assets/imgs/meme/youryaoiaintcheap.jpg",
+                        "/assets/imgs/meme/quittingisnotacceptable.jpg",
+                        "/assets/imgs/meme/haraurara_youmiss100oftheshotsudonttake.jpg",
+                        "/assets/imgs/meme/workharderustupidermin.jpg",
+                    ];
+
+                    const image = document.querySelector(".ad");
+
+                    window.onload = () => generateRandomPicture(imageArray);
+
+                    function generateRandomPicture(array) {
+                        let randomNum = Math.floor(Math.random() * array.length);
+                        image.setAttribute("src", array[randomNum]);
+                    }
+                </script>
+                <aside>
+                    <ul>
+                        <li class="navsection">Portfolio
+                            <li><a href="/portfolio/index.html">Sitemap</a></li>
+                            <li><a href="">Art Gallery</a></li>
+                        </li>
+                        <li class="navsection">Learning Plan
+                            <li><a href="/portfolio/vision.html">Vision</a></li>
+                            <li><a href="/portfolio/goal/index.html">Goals</a></li>
+                            <li><a href="/portfolio/project/index.html">Projects</a></li>
+                        </li>
+                    </ul>
+                    <img src="" class="ad">
+                </aside>
                 <div id="contwrap">
                     <div style="display: flex; padding: 1rem; background-color: var(--lightblue);">
                         <div style="flex: 1;">
@@ -119,11 +224,77 @@
                             </div>
                         </div>
                     </div>
+                    <div id="clipboard">
+                        <div id="tab_row">
+                        </div>
+                        <div id="sitemap_cont">
+                            <ul>
+                                <li><a href="/index.html">Website Homepage</a></li>
+                                <li><a href="">Art Gallery</a></li>
+                                <li>Portfolio
+                                    <ul>
+                                        <li>Learning Plan
+                                            <ul>
+                                                <li><a href="vision.html">Vision</a></li>
+                                                <li><a href="goal/index.html">Goals</a>
+                                                    <ul>
+                                                        <li><a href="https://ticktick.com/pub/project/collaboration/invite/7f7891d184174320be5072ec17f70c7b?u=c8d761fab286479c9f9697d4f1879557" target="_blank">Task List Manager/Site (How I'm keeping track
+                                                            of weeklies)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="project/index.html">Projects</a>
+                                                    <ul>
+
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>LTI
+                                            <ul>
+                                                <li><a href="lti/index.html">Contact Log</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>Advisory Work
+                                            <ul>
+                                                <li>Civics & Government
+                                                    <ul>
+                                                        <li>Notes
+                                                            <ul>
+                                                                <li><a href="301/civics1.html">Civics 1</a></li>
+                                                                <li><a href="301/civics2.html">Thomas Hobbs Contractarianism</a></li>
+                                                                <li><a href="301/civics3.html">John Locke</a></li>
+                                                                <li><a href="301/civics4.html">Jean-Jacques Rousseau Romanticism</a></li>
+                                                                <li><a href="301/civics5.html">John Stuart Mill Utilitarianism</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="https://highlineschools-my.sharepoint.com/:w:/g/personal/4035806_stu_highlineschools_org/IQBHAQjJK9pDSqGwqKsi0KxKAQsXyB3RZ3-QPCiNPIMx0M4?e=1vQOwG" target="_blank">Autobio</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>Msc.
+                                            <ul>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
     </div>
+    <div id="calwrapper">
+        <fieldset style="padding:0px;border:0;margin:0px;">
+            <legend>
+                <a href="http://calendar-muryou.com/" style="color:var(--hyperlinkblue);text-decoration: none;font-size:9pt;" target="_blank" rel="nofollow"></a>
+            </legend><iframe src="https://calendar.sakura.ne.jp/blog_cal.html" scrolling="no" style="background-color:#fbe;padding:0px;border:0;margin:0px;overflow:hidden;width:172px;height:636px;overflow:hidden;"></iframe>
     </div>
+    <img src="/assets/imgs/sticker/wandere_chibi_studying-pixeled.png" class="sticker" style="position: fixed; bottom: 0px; right: 0px; width: 20vw; pointer-events: auto;" cursor:grab; ">
+    <img src="/assets/imgs/sticker/windchime1.gif " class="sticker " style="top: 0px; right: 2px; ">
+    <img src="/assets/imgs/sticker/bandagepatches.png " class="sticker " style="top: 13vh; left: -3vw; width: 20vw; transform: rotate(-20deg); ">
 </body>
 
 </html>

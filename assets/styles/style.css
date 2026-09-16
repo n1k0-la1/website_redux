@@ -5,6 +5,10 @@
     --lightgrey: #efefef;
     --hyperlinkblue: #0000EE;
     --lightblue: #eaf8fe;
+    --highlight_yellow: rgba(255, 252, 93, 0.5);
+    --highlight_pink: rgba(255, 92, 220, 0.51);
+    --highlight_green: rgba(106, 255, 92, 0.51);
+    --highlight_orange: rgba(255, 135, 50, 0.51);
     --mainborder: ridge #608dc4;
 }
 

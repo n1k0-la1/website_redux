@@ -1,7 +1,7 @@
 class smthree extends HTMLElement {
     connectedCallback() {
         this.innerHTML = ` 
-            
+            My views are dropping so follow me!
         `;
     }
 }
