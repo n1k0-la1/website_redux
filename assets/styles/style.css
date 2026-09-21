@@ -4,7 +4,7 @@
     --grey: #747474;
     --lightgrey: #efefef;
     --hyperlinkblue: #0000EE;
-    --lightblue: #eaf8fe;
+    --lightblue: #e0f5ff;
     --highlight_yellow: rgba(255, 252, 93, 0.5);
     --highlight_pink: rgba(255, 92, 220, 0.51);
     --highlight_green: rgba(106, 255, 92, 0.51);
@@ -49,10 +49,19 @@ a:active {
     z-index: top;
 }
 
+mark {
+    background-color: var(--lightblue);
+    color: var(--grey);
+}
+
 body {
     background: url(/assets/imgs/bg/sonny-mauricio-kIr8e-01eAw-unsplash.jpg);
     font-family: basiic;
     color: var(--grey);
+}
+
+table {
+    margin: auto;
 }
 
 thead>tr {
@@ -62,7 +71,7 @@ thead>tr {
 table,
 th,
 td {
-    border: 2px var(--mainborder);
+    border: 1px var(--mainborder);
     border-collapse: collapse;
 }
 
