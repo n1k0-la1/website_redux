@@ -150,3 +150,25 @@ h2 {
 #changelog li {
     list-style: none;
 }
+
+#tab_row {
+    display: grid;
+    grid-template-areas: "101 201 301 .";
+    width: 90%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem;
+    padding: 0px;
+    gap: 5px;
+}
+
+#tab_row button {
+    text-align: center;
+    padding-top: .32rem;
+    color: var(--grey);
+    font-family: basiic;
+    font-size: 1rem;
+    line-height: 1.188rem;
+    border: 0;
+}

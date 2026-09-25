@@ -2,232 +2,505 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Log</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicons/mainfavi.webp" />
-    <script>
-        var documentTitle = document.title + " ! ";
-
-        (function titleMarquee() {
-            document.title = documentTitle = documentTitle.substring(1) + documentTitle.substring(0, 1);
-            setTimeout(titleMarquee, 200);
-        })();
-    </script>
-    <script src="/learning_plan/portfolionavi.js" defer></script>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/framework.css">
-    <script src="/tabscript.js" defer></script>
-    <style>
-        #meow {
-            min-height: 10rem;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            border: none !important;
-            background: none !important;
-            margin-top: 5px !important;
-        }
-        
-        #meow>ul>li {
-            list-style-image: url("/assets/ball_s_06.gif");
-            margin-left: 2rem;
-        }
-        
-        #tab-wrapper {
-            display: grid;
-            width: 90%;
-            margin-bottom: 0px;
-            height: 2rem;
-            padding: 0px;
-            z-index: 1;
-            grid-template-areas: "first second third fourth .";
-            gap: 5px;
-        }
-        
-        #tab-wrapper>a {
-            text-align: center;
-            z-index: 1;
-            padding-top: .32rem;
-            color: #5e5e5e;
-            font-family: Ms Ui Gothic;
-            font-size: 1rem;
-            line-height: 1.188rem;
-            border: 0;
-            text-decoration: none;
-        }
-        
-        th,
-        td {
-            border: 1px solid #5e5e5e;
-        }
-        
-        #tab-wrapper {
-            display: grid;
-            grid-template-areas: "first second . . . ";
-            width: 90%;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: -1px;
-            height: 2rem;
-            padding: 0px;
-            gap: 5px;
-        }
-        
-        #tab-wrapper>button {
-            text-align: center;
-            padding-top: .32rem;
-            color: #5e5e5e;
-            font-family: Ms Ui Gothic;
-            font-size: 1rem;
-            line-height: 1.188rem;
-            border: 0;
-        }
-        
-        #actuallog {
-            background-color: white;
-            border-width: 9px;
-            border-style: solid;
-            border-image: url(/assets/bgs/border_lace_grey.png) 7 fill round;
-            border-top: #5e5e5e 5px solid !important;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/portfolio.css">
+    <script src="/assets/js/tabscript.js" defer></script>
 </head>
+<!--
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+-->
+<style>
+    table {
+        max-width: 99%;
+        margin: auto;
+        display: block;
+        font-size: x-small;
+    }
+    
+    td,
+    th {
+        overflow-x: auto;
+    }
+</style>
 
 <body>
-    <div id="big_div">
-        <img src="/assets/deco/windchime1.gif" class="sticker" style="top: 0; right:0; position: absolute;" onclick="sfxWindchime()" onmouseover="sfxWindchime">
-        <script>
-            function sfxWindchime() {
-                var sfx = new Audio("https://files.catbox.moe/3rzc9r.mp3");
-                sfx.sfxWindchime();
-            }
-        </script>
-        <div id="laced_in">
+    <div id="lacewrap">
+        <div id="headerwrap">
             <header>
-                <img src="/assets/deco/bandagepatches.png" class="sticker" style="width: 15rem; position: relative; bottom: -4rem; left: -4rem; transform: rotate(20deg);">
-                <h1>Contact Log</h1>
+                <div class="marquee"></div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const pageTitle = document.title;
+                        const h1Element = document.querySelector('h1');
+
+                        if (h1Element) {
+                            h1Element.textContent = pageTitle;
+                        }
+                    });
+                </script>
+                <h1></h1>
             </header>
-            <marquee id="news">Please listen carefully, as our menu options have changed. To schedule an interview, press 1 (one) To view future events, press 2 (two). To see an interview or shadow day's page, press the respective entry in the table.</marquee>
-            <div id="realcontent">
-                <breadcrumb-trail></breadcrumb-trail>
-                <div class="ezbox" id="meow">
-                    <div id="tab-wrapper">
-                        <button style="background-color: rgba(255, 252, 93, 0.5);" class="tablinks" onclick="openCity(event, '101')">
-                        101
-                        </button>
-                        <button style="background-color: rgba(255, 92, 220, 0.5);" class="tablinks" onclick="openCity(event, '201')" id="defaultOpen">
-                        201
-                        </button>
+            <marquee>Please listen carefully, as our menu options have changed. To schedule an interview, press 1 (one) To view future events, press 2 (two). To see an interview or shadow day's page, press the respective entry in the table.</marquee>
+            <main>
+                <script defer>
+                    const imageArray = [
+                        "/assets/imgs/meme/borntowork.png",
+                        "/assets/imgs/meme/letsdoourbestthisweek.png",
+                        "/assets/imgs/meme/orvpropaganda_pixeled.jpg",
+                        "/assets/imgs/meme/yjh_lockin.jpg",
+                        "/assets/imgs/meme/yaoimotive.jpg",
+                        "/assets/imgs/meme/theworkisalreadydone.jpg",
+                        "/assets/imgs/meme/urchineseisbad.jpg",
+                        "/assets/imgs/meme/kdj_lockin.jpg",
+                        "/assets/imgs/meme/bitchgraduate.jpg",
+                        "/assets/imgs/meme/locktfingodrawsomethingmakeuroshihappy.jpg",
+                        "/assets/imgs/meme/neverkys.jpg",
+                        "/assets/imgs/meme/bossmakesadollarimakeadimethatswhyidrawyaoioncompanytime.jpg",
+                        "/assets/imgs/meme/youryaoiaintcheap.jpg",
+                        "/assets/imgs/meme/quittingisnotacceptable.jpg",
+                        "/assets/imgs/meme/haraurara_youmiss100oftheshotsudonttake.jpg",
+                        "/assets/imgs/meme/workharderustupidermin.jpg",
+                    ];
+
+                    const image = document.querySelector(".ad");
+
+                    window.onload = () => generateRandomPicture(imageArray);
+
+                    function generateRandomPicture(array) {
+                        let randomNum = Math.floor(Math.random() * array.length);
+                        image.setAttribute("src", array[randomNum]);
+                    }
+                </script>
+                <aside>
+                    <ul>
+                        <li class="navsection">Portfolio
+                            <li><a href="/portfolio/index.html">Sitemap</a></li>
+                            <li><a href="">Art Gallery</a></li>
+                        </li>
+                        <li class="navsection">Learning Plan
+                            <li><a href="/portfolio/vision.html">Vision</a></li>
+                            <li><a href="/portfolio/goal/index.html">Goals</a></li>
+                            <li><a href="/portfolio/project/index.html">Projects</a></li>
+                        </li>
+                    </ul>
+                    <img src="" class="ad">
+                </aside>
+                <div id="contwrap">
+                    <div id="tab_row">
+                        <button onclick="openTab(event, '101')" style="background-color: var(--highlight_yellow);">101</button>
+                        <button onclick="openTab(event, '201')" style="background-color: var(--highlight_pink);">201</button>
+                        <button id="defaultOpen" onclick="openTab(event, '301')" style="background-color: var(--highlight_green);">301</button>
                     </div>
-                    <div id="actuallog">
-                        <script src="contact_log101.js" defer></script>
-                        <101-year id="101" class="tabcontent">
-                        </101-year>
-                        <div id="201" class="tabcontent">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Business Name</th>
-                                        <th>Contact Name</th>
-                                        <th>Job Title/Description</th>
-                                        <th>Email</th>
-                                        <th>Phone number</th>
-                                        <th>Date Contacted</th>
-                                        <th>Follow-up</th>
-                                        <th>Interview date</th>
-                                        <th>Shadow Day</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="green">
-                                        <td>Puget Sound Navy Museum</td>
-                                        <td>Kathrine Young</td>
-                                        <td>Archivist</td>
-                                        <td>kathrine.young2.civ@ us.navy.mil</td>
-                                        <td></td>
-                                        <td>0260220</td>
-                                        <td></td>
-                                        <td>0260312</td>
-                                        <td>0260519 @ 10:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="https://scp-wiki.wikidot.com/scp-9811" target="_blank">Montanna [sic] Natural and Cultural History Museum</a></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr class="green">
-                                        <td>Connection Museum Seattle</td>
-                                        <td>Ed Mattson</td>
-                                        <td>Volunteer Board Member</td>
-                                        <td>info@ connectionsmuseum. org</td>
-                                        <td>(206) 767- 3012</td>
-                                        <td>0260324</td>
-                                        <td>0260325<br>0260327</td>
-                                        <td>0260329</td>
-                                        <td>0260428 @ 1:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tacoma Art Museum</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>Info@ tacomaartmuseum .org</td>
-                                        <td>(253) 272- 4258</td>
-                                        <td>0260324</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr class="green">
-                                        <td>National Archives at Seattle</td>
-                                        <td>Courtney Elliott</td>
-                                        <td></td>
-                                        <td>seattle. archives @nara .gov</td>
-                                        <td>(206) 336- 5132</td>
-                                        <td>0260421</td>
-                                        <td></td>
-                                        <td>0260430 @ 11:00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Klondike Gold Rush National Historical Park</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>stupid form</td>
-                                        <td>(206) 220- 4240</td>
-                                        <td>0260421</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr class="green">
-                                        <td>Seattle Public Library (Special Collections)</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>stupid form</td>
-                                        <td>(206) 386- 4636</td>
-                                        <td>0260421</td>
-                                        <td></td>
-                                        <td>over email</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            Note: I've put a pause on contating places as we near the end of the year. The Connections museum is willing to have me as an intern (and they seem lovely to work with) but I'd like to go do the shadow day with the Naval Museum first before making a decision.
-                        </div>
+                    <div id="101" class="tabcontent">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Business Name</th>
+                                    <th>Contact Name</th>
+                                    <th>Job Title/Description</th>
+                                    <th>Email</th>
+                                    <th>Phone number</th>
+                                    <th>Date Contacted</th>
+                                    <th>Follow-up</th>
+                                    <th>Interview date</th>
+                                    <th>Shadow Day</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="fospl_interview.html">FriendShop/Friends of The Seattle Public Library</a></td>
+                                    <td><a href="fospl_interview.html">Nancy J. Clemens</a></td>
+                                    <td><a href="fospl_interview.html">Sales Manager</a></td>
+                                    <td><a href="fospl_interview.html">friendshop@friendsofspl.org/ friendshopper@gmail.com</a></td>
+                                    <td><a href="fospl_interview.html">(206)733-9015</a></td>
+                                    <td><a href="fospl_interview.html">0241022</a></td>
+                                    <td><a href="fospl_interview.html">0241029</a></td>
+                                    <td><a href="fospl_interview.html"><s>0241114</s><br>0241107 @ 11:15 am</a></td>
+                                    <td>
+                                        <a href="fospl_interview.html"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="hhm_interview.html">Highline Heritage Museum</a></td>
+                                    <td><a href="hhm_interview.html">Nancy McKay</a></td>
+                                    <td><a href="hhm_interview.html">Director</a></td>
+                                    <td><a href="hhm_interview.html">director@highlinemuseum.org</a></td>
+                                    <td><a href="hhm_interview.html">(206)402-4019</a></td>
+                                    <td><a href="hhm_interview.html">0241031</a></td>
+                                    <td><a href="hhm_interview.html">0241119</a>
+                                    </td>
+                                    <td><a href="hhm_interview.html">0241105 @ 10:00 am</a></td>
+                                    <td>
+                                        <a href="hhm_interview.html">↓</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kcls_burien_interview.html">Burien library</a></td>
+                                    <td><a href="kcls_burien_interview.html">Alexis Carter</a></td>
+                                    <td><a href="kcls_burien_interview.html">Librarian</a></td>
+                                    <td><a href="kcls_burien_interview.html">acarter@kcls.org</a></td>
+                                    <td><a href="kcls_burien_interview.html">(206)243-8790</a></td>
+                                    <td><a href="kcls_burien_interview.html">0241112</a></td>
+                                    <td><a href="kcls_burien_interview.html">0241114
+                                    0241121
+                                </a></td>
+                                    <td><a href="kcls_burien_interview.html"><s>0241121 @ 11:00am</s> 0241126 @ 2:00pm</a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="hhm_shadowday.html">Heritage Museum</a></td>
+                                    <td><a href="hhm_shadowday.html">Katherine Williams</a></td>
+                                    <td><a href="hhm_shadowday.html">Volunteer/Archivist</a></td>
+                                    <td><a href="hhm_shadowday.html">seahurstplantchick@gmail.com</a></td>
+                                    <td></td>
+                                    <td><a href="hhm_shadowday.html">0242220</a></td>
+                                    <td><a href="hhm_shadowday.html">0241122<br>0241202</a></td>
+                                    <td></td>
+                                    <td><a href="hhm_shadowday.html">0241206 @ 10:30 am - 3:00 pm</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">King County Library System</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">Brenna Shanks</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">Collections Librarian</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">bshanks@kcls.org</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">(425)369-3331</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">0241203</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">0241209<br>0241216<br>0241219</a></td>
+                                    <td><a href="kcls_collectionslibrarian_interview.html">0241217 @ 11:00 am</a></td>
+                                    <td>
+                                        <a href="kcls_collectionslibrarian_interview.html"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="sam_interview.html">Seattle Art Museum (Libraries)</a></td>
+                                    <td><a href="sam_interview.html">Connor Ong</a></td>
+                                    <td><a href="sam_interview.html">Archivist, (acting) Librarian</a></td>
+                                    <td><a href="sam_interview.html">libraries@seattleartmuseum.org/<br>ConnorO@seattleartmuseum.org</a></td>
+                                    <td><a href="sam_interview.html">(206)654-3220 x221</a></td>
+                                    <td><a href="sam_interview.html">0241203</a></td>
+                                    <td><a href="sam_interview.html">0241204<br>0241209<br>241217<br>0250107</a></td>
+                                    <td><a href="sam_interview.html"><s>0241210 @ 2:15 pm</s><br>0241217 @ 2:15 pm</a></td>
+                                    <td>
+                                        <a href="sam_interview.html"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>AJ Power Studio</td>
+                                    <td>AJ Power</td>
+                                    <td>Artist</td>
+                                    <td>ajpowerstudio@gmail.com</td>
+                                    <td></td>
+                                    <td>0241203</td>
+                                    <td>0241205</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Junko Yamamoto</td>
+                                    <td>Artist</td>
+                                    <td>junko@junkoyamamoto.com</td>
+                                    <td></td>
+                                    <td>0241203</td>
+                                    <td></td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="wingluke_interview.html">Wing Luke Museum</a></td>
+                                    <td><a href="wingluke_interview.html">Steffi Morrison</a></td>
+                                    <td><a href="wingluke_interview.html">Collections Manager</a></td>
+                                    <td><a href="wingluke_interview.html">visit@wingluke.org/<br>smorrison@wingluke.org</a></td>
+                                    <td><a href="wingluke_interview.html">(206)623-5124 x117</a></td>
+                                    <td><a href="wingluke_interview.html">0241305</a></td>
+                                    <td><a href="wingluke_interview.html">0241209<br>0241210<br>0251212<br>0250107</a></td>
+                                    <td><a href="wingluke_interview.html">0241213 @ 11:00 am</a></td>
+                                    <td>
+                                        <a href="wingluke_interview.html">0250205 @ 10:15 am - 2:00 pm</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="sma_interview.html">Seattle Municiplal Archives</a></td>
+                                    <td><a href="sma_interview.html">Jeanie Fisher</a></td>
+                                    <td><a href="sma_interview.html">Interim City Archivist</a></td>
+                                    <td><a href="sma_interview.html">archives@seattle.gov/ jean.fisher@seattle.gov</a></td>
+                                    <td><a href="sma_interview.html">(206)684-8353</a></td>
+                                    <td><a href="sma_interview.html">0250107</a></td>
+                                    <td><a href="sma_interview.html">0250108<br>0250109<br>0250110<br>0250123</a></td>
+                                    <td><a href="sma_interview.html">0250121 @ 11:00 am</a></td>
+                                    <td><a href="sma_interview.html">"unable to accommodate"</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kcma_interview.html">King County Archives</a></td>
+                                    <td><a href="kcma_interview.html">Hannah Soukup</a></td>
+                                    <td><a href="kcma_interview.html">Archivist/Archives Program Manager</a></td>
+                                    <td><a href="kcma_interview.html">archives@kingcounty.gov/ hsoukup@kingcounty.gov</a></td>
+                                    <td><a href="kcma_interview.html">(206)459-9047</a></td>
+                                    <td><a href="kcma_interview.html">0250109</a></td>
+                                    <td><a href="kcma_interview.html">0250210<br>0250211<br>0250213</a></td>
+                                    <td><a href="kcma_interview.html"><s>0250218 @ 2:30 pm</s> 0250220 @ 1:00 pm</a></td>
+                                    <td>
+                                        <a href="kcma_interview.html"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="frye_interview.html">Frye Art Museum</a></td>
+                                    <td><a href="frye_interview.html">Alexis L. Silva</a></td>
+                                    <td><a href="frye_interview.html">Curatorial Assistant</a></td>
+                                    <td><a href="frye_interview.html">curatorial@fryemuseum.org/ ASilva@fryemuseum.org</a></td>
+                                    <td><a href="frye_interview.html">(206)432-8224 x224</a></td>
+                                    <td><a href="frye_interview.html">0250109</a></td>
+                                    <td>
+                                        <a href="frye_interview.html">0250304<br>0250306</a>
+                                    </td>
+                                    <td><a href="frye_interview.html">0250116 @ 10:00 am</a></td>
+                                    <td>
+                                        <a href="frye_interview.html">some time in spring??</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Henry Art Gallery</td>
+                                    <td>Em Chan</td>
+                                    <td>Curatorial Assistant</td>
+                                    <td>curatorial@henryart.org</td>
+                                    <td></td>
+                                    <td>0250304</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Henry Art Gallery</td>
+                                    <td>???</td>
+                                    <td>Info Desk</td>
+                                    <td>info@henryart.org</td>
+                                    <td></td>
+                                    <td>0250304</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>University of Washington Special Collections</td>
+                                    <td>Sandra Kroupa</td>
+                                    <td>Book Arts and Rare Books Curator</td>
+                                    <td>skroupa@uw.edu</td>
+                                    <td></td>
+                                    <td>0250304</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>University of Washington Special Collections</td>
+                                    <td>Amy Pierce</td>
+                                    <td>Processing and Monographic Receiving Specialist</td>
+                                    <td>apx@uw.edu</td>
+                                    <td></td>
+                                    <td>0250304</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!---->
+                    <div id="201" class="tabcontent">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Business Name</th>
+                                    <th>Contact Name</th>
+                                    <th>Job Title/Description</th>
+                                    <th>Email</th>
+                                    <th>Phone number</th>
+                                    <th>Date Contacted</th>
+                                    <th>Follow-up</th>
+                                    <th>Interview date</th>
+                                    <th>Shadow Day</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="green">
+                                    <td>Puget Sound Navy Museum</td>
+                                    <td>Kathrine Young</td>
+                                    <td>Archivist</td>
+                                    <td>kathrine.young2.civ@ us.navy.mil</td>
+                                    <td></td>
+                                    <td>0260220</td>
+                                    <td></td>
+                                    <td>0260312</td>
+                                    <td>0260519 @ 10:00</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://scp-wiki.wikidot.com/scp-9811" target="_blank">Montanna [sic] Natural and Cultural History Museum</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="green">
+                                    <td>Connection Museum Seattle</td>
+                                    <td>Ed Mattson</td>
+                                    <td>Volunteer Board Member</td>
+                                    <td>info@ connectionsmuseum. org</td>
+                                    <td>(206) 767- 3012</td>
+                                    <td>0260324</td>
+                                    <td>0260325<br>0260327</td>
+                                    <td>0260329</td>
+                                    <td>0260428 @ 1:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Tacoma Art Museum</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Info@ tacomaartmuseum .org</td>
+                                    <td>(253) 272- 4258</td>
+                                    <td>0260324</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="green">
+                                    <td>National Archives at Seattle</td>
+                                    <td>Courtney Elliott</td>
+                                    <td></td>
+                                    <td>seattle. archives @nara .gov</td>
+                                    <td>(206) 336- 5132</td>
+                                    <td>0260421</td>
+                                    <td></td>
+                                    <td>0260430 @ 11:00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Klondike Gold Rush National Historical Park</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>stupid form</td>
+                                    <td>(206) 220- 4240</td>
+                                    <td>0260421</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="green">
+                                    <td>Seattle Public Library (Special Collections)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>stupid form</td>
+                                    <td>(206) 386- 4636</td>
+                                    <td>0260421</td>
+                                    <td></td>
+                                    <td>over email</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            Note: I've put a pause on contating places as we near the end of the year. The Connections museum is willing to have me as an intern (and they seem lovely to work with)
+                        </p>
+                    </div>
+                    <!---->
+                    <div id="301" class="tabcontent">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Business Name</th>
+                                    <th>Contact Name</th>
+                                    <th>Job Title/Description</th>
+                                    <th>Email</th>
+                                    <th>Phone number</th>
+                                    <th>Date Contacted</th>
+                                    <th>Follow-up</th>
+                                    <th>Interview date</th>
+                                    <th>Shadow Day</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>National Archives at Seattle</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>seattle.archives@nara.gov</td>
+                                    <td></td>
+                                    <td>0260908</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Connections Museum</td>
+                                    <td>Ed Mattson</td>
+                                    <td>Volunteer Board Member</td>
+                                    <td>info@ connectionsmuseum. org / volunteer@ connectionsmuseum. org</td>
+                                    <td>(206) 767- 3012</td>
+                                    <td>0260910<br>0260919</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Half Price Books (Tukwila)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>(206) 575 - 3173</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Boeing Library and Archives</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>????????</td>
+                                    <td>???</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
+    </main>
     </div>
     </div>
+    <div id="calwrapper">
+        <fieldset style="padding:0px;border:0;margin:0px;">
+            <legend>
+                <a href="http://calendar-muryou.com/" style="color:var(--hyperlinkblue);text-decoration: none;font-size:9pt;" target="_blank" rel="nofollow"></a>
+            </legend><iframe src="https://calendar.sakura.ne.jp/blog_cal.html" scrolling="no" style="background-color:#fbe;padding:0px;border:0;margin:0px;overflow:hidden;width:172px;height:636px;overflow:hidden;"></iframe>
+    </div>
+    <img src="/assets/imgs/sticker/wandere_chibi_studying-pixeled.png" class="sticker" style="position: fixed; bottom: 0px; right: 0px; width: 20vw; pointer-events: auto;" cursor:grab; ">
+    <img src="/assets/imgs/sticker/windchime1.gif " class="sticker " style="top: 0px; right: 2px; ">
+    <img src="/assets/imgs/sticker/bandagepatches.png " class="sticker " style="top: 13vh; left: -3vw; width: 20vw; transform: rotate(-20deg); ">
 </body>
 
 </html>
