@@ -27,6 +27,11 @@
     src: url(/assets/font/basiic.ttf);
 }
 
+@font-face {
+    font-family: fusionpixel;
+    src: url(/assets/font/fusionpixel.otf);
+}
+
 a {
     color: var(--hyperlinkblue);
 }
