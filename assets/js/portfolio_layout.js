@@ -1,5 +1,5 @@
 // initLayout() is called once the DOM (the HTML content of your website) has been loaded.
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const wrapperElement = document.querySelector("body");
     if (wrapperElement) {
         wrapperElement.insertAdjacentHTML("beforeend", footerEl);
@@ -126,7 +126,7 @@ const footerEl = `
     </div>
     <img src="/assets/imgs/sticker/wandere_chibi_studying-pixeled.png" class="sticker"  style="position: fixed; bottom: 0px; right: 0px; width: 20vw; pointer-events: auto;" cursor:grab;">
     <img src="/assets/imgs/sticker/windchime1.gif" class="sticker" style="top: 0px; right: 2px;">
-    <img src="/assets/imgs/sticker/bandagepatches.png" class="sticker" style="top: 13vh; left: -3vw; width: 20vw; transform: rotate(-20deg);">
+    <img src="/assets/imgs/sticker/bandagepatches.png" class="sticker" style="top: 10vh; left: -3vw; width: 20vw; transform: rotate(-20deg);">
 `;
 
 // Insert your sidebar HTML inside these ``. You can use HTML as usual.
@@ -137,7 +137,7 @@ const sidebarEl1 = `
 		<ul>
                     <li class="navsection">Portfolio
                             <li><a href="/portfolio/index.html">Sitemap</a></li>
-                            <li><a href="">Art Gallery</a></li>
+                            <li><a href="/art/index.html">Art Gallery</a></li>
                     </li>
                     <li class="navsection">Learning Plan
                             <li><a href="/portfolio/vision.html">Vision</a></li>
