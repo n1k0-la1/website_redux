@@ -18,7 +18,7 @@ body {
 }
 
 #lacewrap {
-    border: .8rem solid transparent;
+    border: 0.8rem solid transparent;
     border-image: url(/assets/imgs/bg/border_lace_fancy_white.png) 17 round;
     background: url(/assets/imgs/bg/bgtile_strip_a77.gif);
     background-clip: content-box;
@@ -31,7 +31,7 @@ header {
     background-image: url(/assets/imgs/header.png);
     background-size: cover;
     border: var(--mainborder);
-    border-width: 3px 3px 0px 3px;
+    border-width: 3px;
 }
 
 marquee {
@@ -45,11 +45,11 @@ marquee {
     display: block;
 }
 
-marquee> {
+marquee > {
     padding: auto;
 }
 
-header>h1 {
+header > h1 {
     margin-top: auto;
     margin-right: 1rem;
     text-align: right;
@@ -74,7 +74,7 @@ aside {
     background: var(--maingradient);
 }
 
-aside>ul {
+aside > ul {
     padding: 0px;
     margin: 0px;
     width: 100%;
@@ -98,7 +98,7 @@ aside li {
     padding: 10px 0px;
 }
 
-aside>img {
+aside > img {
     display: block;
     margin: 1rem auto;
     width: 90%;
@@ -165,7 +165,7 @@ h2 {
 
 #tab_row button {
     text-align: center;
-    padding-top: .32rem;
+    padding-top: 0.32rem;
     color: var(--grey);
     font-family: basiic;
     font-size: 1rem;

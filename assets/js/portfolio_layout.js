@@ -1,60 +1,57 @@
 // initLayout() is called once the DOM (the HTML content of your website) has been loaded.
-document.addEventListener("DOMContentLoaded", function() {
-
-        const wrapperElement = document.querySelector("body");
-        if (wrapperElement) {
-            wrapperElement.insertAdjacentHTML("beforeend", footerEl)
-        }
-        const headerElement = document.querySelector("#headerwrap");
-        if (headerElement) {
-            headerElement.insertAdjacentHTML("afterbegin", headerEl)
-        }
-        // Inserting sidebars:
-        const contentElement = document.querySelector("main"); // you might have to change this selector to something like .my-wrapper
-        if (contentElement) {
-            contentElement.insertAdjacentHTML("afterbegin", sidebarEl1);
-        }
-
-        initActiveLinks();
-        //title to h1 
-        const pageTitle = document.title;
-        const h1Element = document.querySelector('h1');
-
-        if (h1Element) {
-            h1Element.textContent = pageTitle;
-        }
-        //sidebar img randomizer
-        const imageArray = [
-            "/assets/imgs/meme/borntowork.png",
-            "/assets/imgs/meme/letsdoourbestthisweek.png",
-            "/assets/imgs/meme/orvpropaganda_pixeled.jpg",
-            "/assets/imgs/meme/yjh_lockin.jpg",
-            "/assets/imgs/meme/yaoimotive.jpg",
-            "/assets/imgs/meme/theworkisalreadydone.jpg",
-            "/assets/imgs/meme/urchineseisbad.jpg",
-            "/assets/imgs/meme/kdj_lockin.jpg",
-            "/assets/imgs/meme/bitchgraduate.jpg",
-            "/assets/imgs/meme/locktfingodrawsomethingmakeuroshihappy.jpg",
-            "/assets/imgs/meme/neverkys.jpg",
-            "/assets/imgs/meme/bossmakesadollarimakeadimethatswhyidrawyaoioncompanytime.jpg",
-            "/assets/imgs/meme/youryaoiaintcheap.jpg",
-            "/assets/imgs/meme/quittingisnotacceptable.jpg",
-            "/assets/imgs/meme/haraurara_youmiss100oftheshotsudonttake.jpg",
-            "/assets/imgs/meme/workharderustupidermin.jpg",
-        ];
-
-        const image = document.querySelector(".ad");
-
-        window.onload = () => generateRandomPicture(imageArray);
-
-        function generateRandomPicture(array) {
-            let randomNum = Math.floor(Math.random() * array.length);
-            image.setAttribute("src", array[randomNum]);
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    const wrapperElement = document.querySelector("body");
+    if (wrapperElement) {
+        wrapperElement.insertAdjacentHTML("beforeend", footerEl);
+    }
+    const headerElement = document.querySelector("#headerwrap");
+    if (headerElement) {
+        headerElement.insertAdjacentHTML("afterbegin", headerEl);
+    }
+    // Inserting sidebars:
+    const contentElement = document.querySelector("main"); // you might have to change this selector to something like .my-wrapper
+    if (contentElement) {
+        contentElement.insertAdjacentHTML("afterbegin", sidebarEl1);
     }
 
+    initActiveLinks();
+    //title to h1
+    const pageTitle = document.title;
+    const h1Element = document.querySelector("h1");
 
-);
+    if (h1Element) {
+        h1Element.textContent = pageTitle;
+    }
+    //sidebar img randomizer
+    const imageArray = [
+        "/assets/imgs/meme/borntowork.png",
+        "/assets/imgs/meme/letsdoourbestthisweek.png",
+        "/assets/imgs/meme/orvpropaganda_pixeled.jpg",
+        "/assets/imgs/meme/yjh_lockin.jpg",
+        "/assets/imgs/meme/yaoimotive.jpg",
+        "/assets/imgs/meme/theworkisalreadydone.jpg",
+        "/assets/imgs/meme/urchineseisbad.jpg",
+        "/assets/imgs/meme/kdj_lockin.jpg",
+        "/assets/imgs/meme/bitchgraduate.jpg",
+        "/assets/imgs/meme/locktfingodrawsomethingmakeuroshihappy.jpg",
+        "/assets/imgs/meme/neverkys.jpg",
+        "/assets/imgs/meme/willyoubemyhowhigh.webp",
+        "/assets/imgs/meme/bossmakesadollarimakeadimethatswhyidrawyaoioncompanytime.jpg",
+        "/assets/imgs/meme/youryaoiaintcheap.jpg",
+        "/assets/imgs/meme/quittingisnotacceptable.jpg",
+        "/assets/imgs/meme/haraurara_youmiss100oftheshotsudonttake.jpg",
+        "/assets/imgs/meme/workharderustupidermin.jpg"
+    ];
+
+    const image = document.querySelector(".ad");
+
+    window.onload = () => generateRandomPicture(imageArray);
+
+    function generateRandomPicture(array) {
+        let randomNum = Math.floor(Math.random() * array.length);
+        image.setAttribute("src", array[randomNum]);
+    }
+});
 
 /* ********************************* */
 
@@ -68,10 +65,7 @@ function initActiveLinks() {
 
     const pathname = window.location.pathname;
     [...document.querySelectorAll("a")].forEach((el) => {
-        const elHref = el
-            .getAttribute("href")
-            .replace(".html", "")
-            .replace("/public", "");
+        const elHref = el.getAttribute("href").replace(".html", "").replace("/public", "");
 
         if (pathname == "/") {
             // homepage
@@ -86,10 +80,7 @@ function initActiveLinks() {
 function getNestingString() {
     // This function prepares the "nesting" variable for your header and footer (see below).
     // Only change this function if you know what you're doing.
-    const currentUrl = window.location.href
-        .replace("http://", "")
-        .replace("https://", "")
-        .replace("/public/", "/");
+    const currentUrl = window.location.href.replace("http://", "").replace("https://", "").replace("/public/", "/");
     const numberOfSlahes = currentUrl.split("/").length - 1;
     if (numberOfSlahes == 1) return ".";
     if (numberOfSlahes == 2) return "..";
